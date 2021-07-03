@@ -48,6 +48,10 @@ img {
 
 .container {
   max-width: 110rem;
+
+  @media screen and (max-width: 54.9em) {
+    margin-top: 5rem;
+  }
 }
 
 .card {
