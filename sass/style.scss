@@ -18,12 +18,11 @@ $fontLexend: "Lexend Deca", sans-serif;
 }
 
 html {
-  font-size: 62.5%;
+  font-size: 62.5%; // 1rem = 10px
   -webkit-text-size-adjust: 100%;
 }
 
 body {
-  min-height: 100vh;
   background-color: $veryDarkBlue;
   text-align: center;
   font-family: $fontInter;
@@ -31,10 +30,11 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 0 3rem;
 
   @media screen and (min-width: 55em) {
-    // 55em
     text-align: left;
+    min-height: 100vh;
   }
 }
 
@@ -47,9 +47,7 @@ img {
 }
 
 .container {
-  max-width: 90rem;
-  margin: auto;
-  padding: 8rem 3rem;
+  max-width: 110rem;
 }
 
 .card {
@@ -62,8 +60,8 @@ img {
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
-    max-width: 90rem;
-    min-height: 347px; //21.6875rem;
+    max-width: 110rem;
+    min-height: 40rem;
   }
 
   &__img {
@@ -71,7 +69,14 @@ img {
 
     @media screen and (min-width: 55em) {
       width: 50%;
-      min-height: 21.875rem;
+      min-height: 40rem;
+    }
+
+    img {
+      @media screen and (min-width: 55em) {
+        min-width: 50rem;
+        min-height: 40rem;
+      }
     }
 
     div {
@@ -87,6 +92,7 @@ img {
 
     @media screen and (min-width: 55em) {
       width: 50%;
+      padding: 0 6rem;
     }
   }
 
@@ -151,5 +157,23 @@ img {
     @media screen and (min-width: 55em) {
       letter-spacing: 1px;
     }
+  }
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  color: white;
+  margin: 4rem auto 1rem;
+
+  @media screen and (min-width: 55em) {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+  a {
+    color: rgb(252, 9, 9);
   }
 }
