@@ -1,0 +1,155 @@
+// Variables
+
+$veryDarkBlue: hsl(233, 47%, 7%);
+$darkDesatBlue: hsl(244, 38%, 16%);
+$softVoilet: hsl(277, 64%, 61%);
+$white: hsl(0, 0%, 100%);
+$mainTransparentWhite: hsla(0, 0%, 100%, 0.75);
+$statTransparentWhite: hsla(0, 0%, 100%, 0.6);
+$fontInter: "Inter", sans-serif;
+$fontLexend: "Lexend Deca", sans-serif;
+
+// Basic Reset
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  min-height: 100vh;
+  background-color: $veryDarkBlue;
+  text-align: center;
+  font-family: $fontInter;
+  color: $white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media screen and (min-width: 55em) {
+    // 55em
+    text-align: left;
+  }
+}
+
+span {
+  color: $softVoilet;
+}
+
+img {
+  max-width: 100%;
+}
+
+.container {
+  max-width: 90rem;
+  margin: auto;
+  padding: 8rem 3rem;
+}
+
+.card {
+  max-width: 40rem;
+  background-color: $darkDesatBlue;
+  border-radius: 1rem;
+  overflow: hidden;
+
+  @media screen and (min-width: 55em) {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    max-width: 90rem;
+    min-height: 347px; //21.6875rem;
+  }
+
+  &__img {
+    position: relative;
+
+    @media screen and (min-width: 55em) {
+      width: 50%;
+      min-height: 21.875rem;
+    }
+
+    div {
+      position: absolute;
+      inset: 0;
+      background-color: hsla(277, 75%, 39%, 0.6);
+    }
+  }
+
+  &__content {
+    margin: 3rem auto;
+    padding: 0 3rem;
+
+    @media screen and (min-width: 55em) {
+      width: 50%;
+    }
+  }
+
+  &__title {
+    font-size: 2.5rem;
+    font-weight: 700;
+
+    @media screen and (min-width: 55em) {
+      font-size: 3rem;
+    }
+  }
+
+  &__details {
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: $mainTransparentWhite;
+    margin: 2rem 0;
+    line-height: 1.6;
+    word-spacing: 0.4rem;
+
+    @media screen and (min-width: 55em) {
+      margin: 3rem 0;
+      font-size: 1.4;
+    }
+  }
+}
+
+.features {
+  margin-top: 3.5rem;
+
+  @media screen and (min-width: 55em) {
+    display: flex;
+    align-items: center;
+    margin-top: 6rem;
+  }
+
+  div:not(:last-child) {
+    margin-bottom: 2.5rem;
+
+    @media screen and (min-width: 55em) {
+      margin-bottom: 0;
+      margin-right: 6rem;
+    }
+  }
+
+  h2 {
+    font-size: 2rem;
+
+    @media screen and (min-width: 55em) {
+      font-size: 2.2rem;
+    }
+  }
+
+  p {
+    font-family: "Lexend Deca", sans-serif;
+    font-weight: 400;
+    font-size: 1.1rem;
+    color: $statTransparentWhite;
+    text-transform: uppercase;
+    margin-top: 0.5rem;
+
+    @media screen and (min-width: 55em) {
+      letter-spacing: 1px;
+    }
+  }
+}
